@@ -1,22 +1,25 @@
-
 public class soldier {
-	private int Hitpoints;
-	private int Lives;
-	
-	//Getter
-	public int getHitpoints() {
-	    return Hitpoints;
-}
-	 // Setter
-	  public void setHitpoints(int c) {
-	    this.Hitpoints = c;
-	  }
-	//Getter
-		public int getLives() {
-		    return Lives;
+
+	private int lives;
+	private int hitpoints;
+	public soldier(int lives, int hitpoints) {
+		this.lives = lives;
+		this.hitpoints = hitpoints;
 	}
-	// Setter
-		public void setHitpoints(int c) {
-		    this.Lives = c;
-		  }
+	public int getLives() {
+		return lives;
+	}
+	public void setLives(int lives) {
+		this.lives = lives;
+	}
+	public int getHitpoints() {
+		return hitpoints;
+	}
+	public void setHitpoints(int hitpoints) {
+		this.hitpoints = hitpoints;
+	}
+	public int takeDamage(int damage){
+		int remainingHitpoints = getHitpoints() - damage;
+		return remainingHitpoints;
+	}
 }
